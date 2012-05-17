@@ -1,0 +1,8 @@
+<%= provide(:title, @profile.title) %>
+<h1><%= @profile.title %></h1>
+
+<p><%= @profile.content %></p>
+
+<div id="bg">
+  <%= image_tag @profile.image_url.to_s %>
+</div>

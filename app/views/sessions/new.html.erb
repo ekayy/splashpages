@@ -1,2 +1,21 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
+
+
+<div class="row">
+  <div class="span6 offset3">
+
+  	<%= form_tag sessions_path do %>
+
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
+
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>  
+
+      <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+  <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+  </div>
+</div>

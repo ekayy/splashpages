@@ -2,13 +2,14 @@ Splashpages::Application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'signin', to: 'sessions#new', as: 'signin'
   get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'index', to: 'profiles#index', as: 'index'
   
   resources :users do
     resource :profiles
   end
-  resources :sessions
+  resources :sessions, only: [:new, :create, :destroy]
 
-  root to: "users#new"
+  root to: "sessions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,8 +1,29 @@
 <%= provide(:title, @profile.title) %>
-<h1><%= @profile.title %></h1>
 
-<p><%= @profile.content %></p>
+<body style="<%= show_user_bg %>">
+<div class="st_overlay"></div>
+<div id="profile-container">
+	<div class="content-container">
+		<h1><%= @profile.title %></h1>
+		<p><%= @profile.content %></p>
+	</div>
+	<div id="toggleh1">
+		<%= link_to "Menu", '#' %>
+	</div>
+</div>
 
-<div id="bg">
-  <%= image_tag @profile.image_url.to_s %>
+<div id="menu">
+	<h2>Menu</h2>
+	<p>
+		Foie Gras Custard With Duck Magret purple cauliflower, hon shimeji & beef consomme	 	 	 16.00</p>
+<p>Soup Of Frogs Legs & Nantucket Bay Scallops double cream, button mushrooms, parsley & garlic	 	 	 18.00</p>
+<p>Handmade Braised Short Rib Ravioli root vegetables, sugar snap peas & tomato confit	 	 	 22.00</p>
+<p>Vension Cappelleti "grand veneur" butternut squash beignet & roquefort emulsion	 	 	 18.00</p>
+<p>Fresh Seasonal Burgundy Black Truffle Risotto 	 	 	 49.00</p>
+<p>Sauteed Calamari And Pata Negra tomato confit, garlic chips, squid ink sauce & aioli	 	 	 22.00</p>
+<p>Roasted Veal Sweet Breads Grenobloise peas, celeriac & chanterelles	 	 	 27.00</p>
+<p>Braised Veal Cheeks "Provencal" salsify "grenadine" brussels sprouts & sunchoke mousseline	 	 	 26.00</p>
+<p>"Iberico" Suckling Pig granny smith confit, panisse, tangerine jus & elderflower	 	 	 28.00</p>
+<p>Prime Creek Stone Corn Fed Beef Filet potato sauffle & green pepper sauce	 	 	(8oz) 39.00
+</p>
 </div>

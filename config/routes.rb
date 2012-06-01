@@ -4,6 +4,8 @@ Splashpages::Application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   get 'index', to: 'profiles#index', as: 'index'
   
+  match '/users/:id', to: 'users#show', as: :user
+
   resources :users do
     resource :profiles
   end

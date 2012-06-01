@@ -1,13 +1,13 @@
 class ProfilesController < ApplicationController
   def new
-  	@profile = Profile.new 
+  	@profile = Profile.new
   	@user = User.find(session[:user_id])
   end
 
   def create
 	  @profile = current_user.build_profile(params[:profile])
 	  if @profile.save
-	    render 'show'
+	    render 'edit'
 	  else
 	    render 'new'
 	  end
@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
-		@profile = current_user.profile
+		@user = User.find(params[:user_id])
 	end
 
 	def index

@@ -2,6 +2,7 @@
   <div class="navbar-inner">
     <div class="container">
       <nav>
+        
         <ul class="nav pull-right">
           <% if current_user %>
           <li><%= link_to "Profile", user_profiles_path(current_user) %></li>
@@ -23,3 +24,4 @@
     </div>
   </div>
 </header>
+

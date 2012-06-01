@@ -2,9 +2,9 @@
 <h1>All profiles</h1>
 
 <ul class="users">
-  <% @profiles.each do |profile| %>
+ 		<% @profiles.each do |profile| %>
     <li>
-      <%= link_to profile.title, '#' %>
+      <%= link_to profile.title, user_profiles_path(profile.user_id) %>
     </li>
   <% end %>
 </ul>

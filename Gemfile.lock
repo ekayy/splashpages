@@ -183,7 +183,7 @@ DEPENDENCIES
   jquery-rails (= 2.0.0)
   jquery-ui-rails
   pg (= 0.12.2)
-  rails (= 3.2.3)
+  rails
   rb-fsevent
   rspec-rails (= 2.9.0)
   sass-rails (= 3.2.4)

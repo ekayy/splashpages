@@ -2,7 +2,11 @@
   <div class="navbar-inner">
     <div class="container">
       <nav>
-        
+        <ul class="nav pull-left">
+          <li><%= link_to "Logo", user_profiles_path(current_user) %></li>
+          <li><%= link_to "Search", search_path %></li>
+        </ul>
+
         <ul class="nav pull-right">
           <% if current_user %>
           <li><%= link_to "Profile", user_profiles_path(current_user) %></li>

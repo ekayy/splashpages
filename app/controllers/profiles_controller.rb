@@ -19,6 +19,7 @@ class ProfilesController < ApplicationController
 	end
 
 	def update
+		@user = User.find(params[:user_id])
 		@profile = current_user.profile
 		if @profile.update_attributes(params[:profile])
       render 'show'
@@ -32,6 +33,6 @@ class ProfilesController < ApplicationController
 	end
 
 	def index
-		@profiles = Profile.all
+		@profiles = Profile.search(params[:search])
 	end
 end

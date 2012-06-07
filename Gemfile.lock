@@ -46,8 +46,6 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
-    cloudinary (1.0.24)
-      rest-client
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -113,8 +111,7 @@ GEM
     rb-fsevent (0.9.1)
     rdoc (3.12)
       json (~> 1.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rmagick (2.13.1)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
       rspec-expectations (~> 2.9.0)
@@ -176,7 +173,6 @@ DEPENDENCIES
   bootstrap-sass (= 2.0.0)
   capybara (= 1.1.2)
   carrierwave
-  cloudinary
   coffee-rails (= 3.2.2)
   database_cleaner (= 0.7.0)
   factory_girl_rails (= 1.4.0)
@@ -185,6 +181,7 @@ DEPENDENCIES
   pg (= 0.12.2)
   rails
   rb-fsevent
+  rmagick
   rspec-rails (= 2.9.0)
   sass-rails (= 3.2.4)
   spork (= 0.9.0)

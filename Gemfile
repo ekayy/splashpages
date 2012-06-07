@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'bootstrap-sass', '2.0.0'
 gem 'carrierwave'
-gem 'cloudinary'
+gem 'rmagick'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

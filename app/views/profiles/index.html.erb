@@ -1,5 +1,5 @@
-<%= provide(:title, 'All users') %>
-<h1>All profiles</h1>
+<%= provide(:title, 'Search') %>
+<h1>Search</h1>
 
 <div class="container">
 	<div class="row=">
@@ -12,12 +12,13 @@
 			<% end %>
 		</div>
 	</div>
-</div>
 
-<ul class="users">
+
+<ul class="thumbnails">
 	<% @profiles.each do |profile| %>
-	 		<%= image_tag profile.image_url(:thumb).to_s %>
-	    <li><%= link_to profile.title, user_profiles_path(profile.user_id) %></li>
+ 		<li class="span3">
+ 			<a href="#" class="thumbnail"><%= image_tag profile.image_url(:thumb).to_s %>
+    <%= link_to profile.title, user_profiles_path(profile.user_id) %></a></li>
   <% end %>
 </ul>
-
+</div>

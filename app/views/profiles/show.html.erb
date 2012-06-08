@@ -1,10 +1,90 @@
 <%= provide(:title, @user.profile.title) %>
 
 <body style="<%= show_user_bg %>">
-<div class="st_overlay"></div>
+
 
 <div class="st_main">
 	<h1><%= @user.profile.title %></h1>
+
+	<li id="toggle1">Menu</li>
+	<li id="toggle2">Photos</li>
+	<li id="toggle3">Contact</li>
+
+<div class="span6 offset4" id="menu">
+	<h2>Menu</h2>
+	<ul class="nav nav-tabs" id="menu-tabs">
+	  <li class="active"><a href="#1" data-toggle="tab">Appetizers</a></li>
+	  <li><a href="#2" data-toggle="tab">Entrees</a></li>
+	  <li><a href="#3" data-toggle="tab">Desserts</a></li>
+	  <li><a href="#4" data-toggle="tab">Beverages</a></li>
+	</ul>
+ 
+	<div class="tab-content" id="menu-content">
+	  <div class="tab-pane active" id="1">
+	  	<li>Lobster Bisque</li>
+      <li>Smoked Salmon Terrine</li>
+      <li>Tuna Ceviche</li>
+      <li>Wild Mushroom Flan</li>
+      <li>Almond Bruschetta</li>
+      <li>Green Chilli Canapee</li>
+      <li>Artichoke Rucula Salad</li>
+	  </div>
+	  <div class="tab-pane" id="2">Second</div>
+	  <div class="tab-pane" id="3">Third</div>
+	  <div class="tab-pane" id="4">Fourth</div>
+	</div>
+</div>
+
+<ul class="thumbnails" style="display:none;">
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/1.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/2.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/3.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/4.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/5.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/6.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/7.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/8.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/9.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+</ul>
+
+	<!--
+	<div class="st_overlay"></div>
 
 	<ul class="st_navigation" id="st_nav">
 		<li class="album">
@@ -31,44 +111,3 @@
 		</li>
 	</ul>
 </div>	
-
-	<p style="display:none;"><%= @user.profile.content %></p>
-
-  <div class="ac_menu" id="tabs">
-    <h2>Menu</h2>
-    	<ul>
-				<li><a href="#tabs-1">Nunc tincidunt</a></li>
-				<li><a href="#tabs-2">Proin dolor</a></li>
-				<li><a href="#tabs-3">Aenean lacinia</a></li>
-			</ul>
-    	<div id="tabs-1">
-    		<ul>
-	        <li>Lobster Bisque</li>
-	        <li>Smoked Salmon Terrine</li>
-	        <li>Tuna Ceviche</li>
-	        <li>>Wild Mushroom Flan</li>
-	        <li>Almond Bruschetta</li>
-	        <li>Green Chilli Canapee</li>
-	        <li>Artichoke Rucula Salad</li>
-	      </ul>
-      </div>
-      <div id="tabs-2">
-    		<ul>
-	        <li>Smoked Salmon Terrine</li>
-	        <li>Tuna Ceviche</li>
-	        <li>>Wild Mushroom Flan</li>
-	        <li>Almond Bruschetta</li>
-	        <li>Green Chilli Canapee</li>
-	        <li>Artichoke Rucula Salad</li>
-	      </ul>
-      </div>
-      <div id="tabs-3">
-    		<ul>
-	        <li>Tuna Ceviche</li>
-	        <li>>Wild Mushroom Flan</li>
-	        <li>Almond Bruschetta</li>
-	        <li>Green Chilli Canapee</li>
-	        <li>Artichoke Rucula Salad</li>
-	      </ul>
-      </div>
-  </div><!-- ac_menu -->

@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
   def create
 	  @profile = current_user.build_profile(params[:profile])
 	  if @profile.save
-	    render 'edit'
+	    render 'show'
 	  else
 	    render 'new'
 	  end

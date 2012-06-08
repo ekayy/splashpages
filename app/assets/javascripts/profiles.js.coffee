@@ -6,4 +6,4 @@ $(document).ready ->
  	$('#toggleh1').click ->
  		$('#tabs').toggle()
 
-	$('#tabs').tabs();
+	$('#date').datepicker()

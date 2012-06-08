@@ -6,7 +6,7 @@
 		<div class="span6 offset3">
 			<%= form_tag search_path, :method => 'get' do %>
 				<p>
-					<%= text_field_tag :search, params[:search] %>
+					<%= text_field_tag :search, params[:search], :class => "input-xlarge" %>
 					<%= submit_tag "Search", :name => nil %>
 				</p>
 			<% end %>
@@ -16,9 +16,9 @@
 
 <ul class="thumbnails">
 	<% @profiles.each do |profile| %>
- 		<li class="span3">
+ 		<li class="span4">
  			<a href="#" class="thumbnail"><%= image_tag profile.image_url(:thumb).to_s %>
-    <%= link_to profile.title, user_profiles_path(profile.user_id) %></a></li>
+    <%= link_to profile.title, user_profiles_path(profile.user_id) %></a></li><br/>
   <% end %>
 </ul>
 </div>

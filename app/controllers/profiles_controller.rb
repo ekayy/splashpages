@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
+  	@user = User.find(params[:user_id])
 	  @profile = current_user.build_profile(params[:profile])
 	  if @profile.save
 	    render 'show'

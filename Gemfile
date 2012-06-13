@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails'
 gem 'bootstrap-sass', '2.0.0'
 gem 'carrierwave'
 
@@ -10,12 +10,18 @@ gem 'carrierwave'
 group :development do
   gem 'sqlite3', '1.3.5'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
-group :test, :development do
-  gem 'rspec-rails', '2.9.0'
-  gem 'spork', '0.9.0'
-end
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara', '1.1.2'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+  gem 'guard-spork'
+  gem 'spork'
+end 
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,15 +31,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.0'
-
-group :test do
-  gem 'capybara', '1.1.2'
-  gem 'spork', '0.9.0'
-  gem 'factory_girl_rails', '1.4.0'
-  gem 'database_cleaner', '0.7.0'
-  gem 'rb-fsevent'
-end 
+gem 'jquery-rails'
 
 group :production do
   gem 'pg', '0.12.2'

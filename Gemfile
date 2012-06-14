@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'bootstrap-sass', '2.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 gem 'carrierwave'
 gem 'rmagick'
 
@@ -13,11 +14,6 @@ group :development do
   gem 'annotate', '~> 2.4.1.beta'
 end
 
-group :test, :development do
-  gem 'rspec-rails', '2.9.0'
-  gem 'spork', '0.9.0'
-end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,14 +23,21 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
+
+group :test, :development do
+  gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+end
 
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
+  gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
-  gem 'factory_girl_rails', '1.4.0'
-  gem 'database_cleaner', '0.7.0'
-  gem 'rb-fsevent'
 end 
 
 group :production do
@@ -42,7 +45,7 @@ group :production do
 end
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~>3.0.0'
+# gem 'bcrypt-ruby', '~>3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

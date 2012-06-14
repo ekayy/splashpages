@@ -1,10 +1,24 @@
-<%= provide(:title, 'All users') %>
-<h1>All profiles</h1>
+<%= provide(:title, 'Search') %>
+<h1>Search</h1>
 
-<ul class="users">
-  <% @profiles.each do |profile| %>
-    <li>
-      <%= link_to profile.title, '#' %>
-    </li>
+<div class="container">
+	<div class="row=">
+		<div class="span6 offset3">
+			<%= form_tag search_path, :method => 'get' do %>
+				<p>
+					<%= text_field_tag :search, params[:search], :class => "input-xlarge" %>
+					<%= submit_tag "Search", :name => nil %>
+				</p>
+			<% end %>
+		</div>
+	</div>
+
+
+<ul class="thumbnails">
+	<% @profiles.each do |profile| %>
+ 		<li class="span4">
+ 			<a href="#" class="thumbnail"><%= image_tag profile.image_url(:thumb).to_s %>
+    <%= link_to profile.title, user_profiles_path(profile.user_id) %></a></li><br/>
   <% end %>
 </ul>
+</div>

@@ -2,8 +2,10 @@ Splashpages::Application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'signin', to: 'sessions#new', as: 'signin'
   get 'signout', to: 'sessions#destroy', as: 'signout'
-  get 'index', to: 'profiles#index', as: 'index'
+  get 'search', to: 'profiles#index', as: 'search'
   
+  match '/users/:id', to: 'users#show', as: :user
+
   resources :users do
     resource :profiles
   end

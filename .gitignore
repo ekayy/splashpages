@@ -20,4 +20,8 @@ doc/
 *~
 .project
 .DS_Store
+<<<<<<< HEAD
 bundler_stubs/
+=======
+bundler_stubs
+>>>>>>> development

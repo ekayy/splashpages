@@ -1,10 +1,11 @@
 class ProfilesController < ApplicationController
   def new
-  	@profile = Profile.new 
+  	@profile = Profile.new
   	@user = User.find(session[:user_id])
   end
 
   def create
+  	@user = User.find(params[:user_id])
 	  @profile = current_user.build_profile(params[:profile])
 	  if @profile.save
 	    render 'show'
@@ -19,6 +20,7 @@ class ProfilesController < ApplicationController
 	end
 
 	def update
+		@user = User.find(params[:user_id])
 		@profile = current_user.profile
 		if @profile.update_attributes(params[:profile])
       render 'show'
@@ -28,10 +30,10 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
-		@profile = current_user.profile
+		@user = User.find(params[:user_id])
 	end
 
 	def index
-		@profiles = Profile.all
+		@profiles = Profile.search(params[:search])
 	end
 end

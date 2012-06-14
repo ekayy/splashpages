@@ -1,29 +1,113 @@
-<%= provide(:title, @profile.title) %>
+<%= provide(:title, @user.profile.title) %>
 
 <body style="<%= show_user_bg %>">
-<div class="st_overlay"></div>
-<div id="profile-container">
-	<div class="content-container">
-		<h1><%= @profile.title %></h1>
-		<p><%= @profile.content %></p>
-	</div>
-	<div id="toggleh1">
-		<%= link_to "Menu", '#' %>
+
+
+<div class="st_main">
+	<h1><%= @user.profile.title %></h1>
+
+	<li id="toggle1">Menu</li>
+	<li id="toggle2">Photos</li>
+	<li id="toggle3">Contact</li>
+
+<div class="span6 offset4" id="menu" style="display:none;">
+	<h2>Menu</h2>
+	<ul class="nav nav-tabs" id="menu-tabs">
+	  <li class="active"><a href="#1" data-toggle="tab">Appetizers</a></li>
+	  <li><a href="#2" data-toggle="tab">Entrees</a></li>
+	  <li><a href="#3" data-toggle="tab">Desserts</a></li>
+	  <li><a href="#4" data-toggle="tab">Beverages</a></li>
+	</ul>
+ 
+	<div class="tab-content" id="menu-content">
+	  <div class="tab-pane active" id="1">
+	  	<li>Lobster Bisque</li>
+      <li>Smoked Salmon Terrine</li>
+      <li>Tuna Ceviche</li>
+      <li>Wild Mushroom Flan</li>
+      <li>Almond Bruschetta</li>
+      <li>Green Chilli Canapee</li>
+      <li>Artichoke Rucula Salad</li>
+	  </div>
+	  <div class="tab-pane" id="2">Second</div>
+	  <div class="tab-pane" id="3">Third</div>
+	  <div class="tab-pane" id="4">Fourth</div>
 	</div>
 </div>
 
-<div id="menu">
-	<h2>Menu</h2>
-	<p>
-		Foie Gras Custard With Duck Magret purple cauliflower, hon shimeji & beef consomme	 	 	 16.00</p>
-<p>Soup Of Frogs Legs & Nantucket Bay Scallops double cream, button mushrooms, parsley & garlic	 	 	 18.00</p>
-<p>Handmade Braised Short Rib Ravioli root vegetables, sugar snap peas & tomato confit	 	 	 22.00</p>
-<p>Vension Cappelleti "grand veneur" butternut squash beignet & roquefort emulsion	 	 	 18.00</p>
-<p>Fresh Seasonal Burgundy Black Truffle Risotto 	 	 	 49.00</p>
-<p>Sauteed Calamari And Pata Negra tomato confit, garlic chips, squid ink sauce & aioli	 	 	 22.00</p>
-<p>Roasted Veal Sweet Breads Grenobloise peas, celeriac & chanterelles	 	 	 27.00</p>
-<p>Braised Veal Cheeks "Provencal" salsify "grenadine" brussels sprouts & sunchoke mousseline	 	 	 26.00</p>
-<p>"Iberico" Suckling Pig granny smith confit, panisse, tangerine jus & elderflower	 	 	 28.00</p>
-<p>Prime Creek Stone Corn Fed Beef Filet potato sauffle & green pepper sauce	 	 	(8oz) 39.00
-</p>
-</div>
+<ul class="thumbnails" style="display:none;">
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/1.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/2.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/3.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/4.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/5.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/6.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/7.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/8.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+  <li class="span3">
+    <a href="#" class="thumbnail">
+      <img src="/images/thumbs/9.jpg" alt="1.jpg"/>
+    </a>
+  </li>
+</ul>
+
+	<!--
+	<div class="st_overlay"></div>
+
+	<ul class="st_navigation" id="st_nav">
+		<li class="album">
+			<span class="st_link" id="toggleh1"><%= link_to "Menu", '#' %><span class="st_arrow_down"></span></span>
+		</li>
+		<li class="album">
+			<span class="st_link">Photo<span class="st_arrow_down"></span></spaN>
+			<div class="st_wrapper st_thumbs_wrapper">
+			  <div class="st_thumbs">
+			    <img src="/images/thumbs/1.jpg" alt="1.jpg"/>
+			    <img src="/images/thumbs/2.jpg" alt="2.jpg"/>
+			    <img src="/images/thumbs/3.jpg" alt="3.jpg"/>
+			    <img src="/images/thumbs/4.jpg" alt="4.jpg"/>
+			    <img src="/images/thumbs/5.jpg" alt="5.jpg"/>
+			    <img src="/images/thumbs/6.jpg" alt="6.jpg"/>
+			    <img src="/images/thumbs/7.jpg" alt="7.jpg"/>
+			    <img src="/images/thumbs/8.jpg" alt="8.jpg"/>
+			    <img src="/images/thumbs/9.jpg" alt="9.jpg"/>
+			  </div>
+			</div>
+		</li>
+		<li class="album">
+			<span class="st_link">Contact<span class="st_arrow_down"></span></span>
+		</li>
+	</ul>
+</div>	

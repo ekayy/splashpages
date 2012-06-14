@@ -29,7 +29,11 @@ end
 
   
 
+<<<<<<< HEAD
 guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
+=======
+guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' }, :test_unit => false do
+>>>>>>> development
   watch('config/application.rb')
   watch('config/environment.rb')
   watch(%r{^config/environments/.+\.rb$})

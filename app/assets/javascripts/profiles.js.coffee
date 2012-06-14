@@ -4,8 +4,6 @@
 
 $(document).ready ->
  	$('#toggleh1').click ->
- 		$('#menu').toggle()
- 	
+ 		$('#tabs').toggle()
 
-	$('.editable').inlineEdit()
-
+	$('#date').datepicker()

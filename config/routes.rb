@@ -1,4 +1,6 @@
 Splashpages::Application.routes.draw do
+  get "static_pages/home"
+
   get 'signup', to: 'users#new', as: 'signup'
   get 'signin', to: 'sessions#new', as: 'signin'
   get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -11,7 +13,7 @@ Splashpages::Application.routes.draw do
   end
   resources :sessions, only: [:new, :create, :destroy]
 
-  root to: "sessions#new"
+  root to: "static_pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

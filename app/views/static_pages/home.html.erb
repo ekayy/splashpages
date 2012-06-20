@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	  <title>Splashpages | <%= yield(:title) %></title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	  <%= render 'layouts/shim' %>
+	</head>
+<body style="background:#e8e8e8;">
+	<h1><%= image_tag 'weSPOT.png' %></h1>
+
+<%
+=begin %>
+<div class="container">
+  <div class="row">
+		<div class="span4 offset4">
+		<%= form_tag do %>
+
+			<%= label_tag :email %>
+	    <%= text_field_tag :email %>
+
+	    <%= submit_tag "Submit", class: "btn btn-large btn-primary" %>
+	  <% end %>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<% 
+=end %>

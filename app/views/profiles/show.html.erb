@@ -2,10 +2,46 @@
 
 <body style="<%= show_user_bg %>">
 
+<div class="nav2">
+  <div class="nav2-title">
+	  <h1><%= @user.profile.title %></h1>
+  </div>
+  <div class="nav2-links">  
+    <ul>
+      <li class="tk-league-gothic"><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Menu</a></li>
+      <li class="tk-league-gothic"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
-<div class="st_main">
-	<h1><%= @user.profile.title %></h1>
+<div id="light" class="lightbox">
+  <h2>Menu</h2>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Appetizers</a></li>
+      <li><a href="#tabs-2">Entrees</a></li>
+      <li><a href="#tabs-3">Beverages</a></li>
+    </ul>
+ 
+    <div id="tabs-1">
+      <li>Lobster Bisque</li>
+      <li>Smoked Salmon Terrine</li>
+      <li>Tuna Ceviche</li>
+      <li>Wild Mushroom Flan</li>
+      <li>Almond Bruschetta</li>
+      <li>Green Chilli Canapee</li>
+      <li>Artichoke Rucula Salad</li>
+    </div>
+      <div id="tabs-2">Second</div>
+      <div id="tabs-3">Third</div>
+  </div>
 
+
+<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+</div>  
+<div id="fade" class="black_overlay"></div>
+
+  <!--
 	<li id="toggle1">Menu</li>
 	<li id="toggle2">Photos</li>
 	<li id="toggle3">Contact</li>
@@ -83,7 +119,7 @@
   </li>
 </ul>
 
-	<!--
+
 	<div class="st_overlay"></div>
 
 	<ul class="st_navigation" id="st_nav">

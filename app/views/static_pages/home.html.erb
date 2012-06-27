@@ -9,24 +9,23 @@
 	  <%= render 'layouts/shim' %>
 	</head>
 <body style="background:#e8e8e8;">
-	<h1><%= image_tag 'weSPOT.png' %></h1>
+	
+	<%= image_tag 'weSPOT.png', :style => "display: block;margin-left:auto;margin-right:auto;" %>
 
-<%
-=begin %>
 <div class="container">
+
   <div class="row">
 		<div class="span4 offset4">
 		<%= form_tag do %>
 
-			<%= label_tag :email %>
-	    <%= text_field_tag :email %>
-
-	    <%= submit_tag "Submit", class: "btn btn-large btn-primary" %>
+	    <%= text_field_tag :email, nil, :placeholder => "Email" %>
 	  <% end %>
 		</div>
 	</div>
 </div>
 </body>
 </html>
+<%
+=begin %>
 <% 
 =end %>

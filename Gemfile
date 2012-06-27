@@ -5,7 +5,6 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'carrierwave'
 gem 'rmagick'
-gem "hominid"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -41,10 +40,6 @@ group :test do
   gem "cucumber-rails", ">= 1.3.0", :require => false
   gem "database_cleaner", ">= 0.8.0"
 end 
-
-group :production do
-  gem 'pg', '0.12.2'
-end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~>3.0.0'

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> development
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +15,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120524235305) do
+=======
+ActiveRecord::Schema.define(:version => 20120531233717) do
+>>>>>>> development
 
   create_table "profiles", :force => true do |t|
     t.string   "title"
@@ -32,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20120524235305) do
   end
 
 end
+<<<<<<< HEAD
 =======
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
@@ -66,4 +74,6 @@ ActiveRecord::Schema.define(:version => 20120524235305) do
   end
 
 end
+>>>>>>> development
+=======
 >>>>>>> development

@@ -1,8 +1,4 @@
-$(document).ready(function(){
-  $("#toggle1").click(function(){
-    $("#menu").toggle();
+
+  $(function() {
+    $( "#tabs" ).tabs();
   });
-  $("#toggle2").click(function(){
-    $(".thumbnails").toggle();
-  });
-});

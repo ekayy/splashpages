@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120703205118) do
-=======
 ActiveRecord::Schema.define(:version => 20120531233717) do
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
 
   create_table "profiles", :force => true do |t|
     t.string   "title"
@@ -32,10 +28,7 @@ ActiveRecord::Schema.define(:version => 20120531233717) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "user_name"
-<<<<<<< HEAD
     t.string   "business_name"
-=======
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
   end
 
 end

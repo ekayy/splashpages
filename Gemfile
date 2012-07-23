@@ -41,6 +41,11 @@ group :test do
   gem "database_cleaner", ">= 0.8.0"
 end 
 
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~>3.0.0'
 

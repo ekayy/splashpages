@@ -66,17 +66,11 @@ p {
 .nav2 {
   color:white;
   float: left;
-<<<<<<< HEAD
   padding: 20px 20px 15px 20px;
-=======
-  padding: 20px 20px 0 30px;
-  width: auto;
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
   min-width: 150px;
   max-width: 540px;
   background-color: rgba(0, 0, 0, .82);
   position: fixed;
-<<<<<<< HEAD
   top: 12%;
   left: 15%;
   .nav2-title {
@@ -93,42 +87,18 @@ p {
     ul {
       float: left;
       margin: 0 0 1.5em 0;
-=======
-  top: 15%;
-  left: 15%;
-  .nav2-title {
-    background-color: rgba(35, 4, 138, .82);
-    h1 {
-      float:left;
-      color:white;
-    }
-  }
-  .nav2-links {
-    ul {
-      float: left;
-      margin: 0 0 3em 0;
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
       padding: 0;
       list-style: none;
       li {
         float: left;
-<<<<<<< HEAD
         padding-right: 20px;
-=======
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
       }
     }
     a {
       color:white;
-<<<<<<< HEAD
       font-size: 16px;
       font-weight: bold;
       display:block;
-=======
-      font-size: 24px;
-      display:block;
-      width:60px;
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
     }
   }
 }
@@ -250,8 +220,6 @@ aside {
   -moz-opacity: 0.8;
   opacity:.80;
   filter: alpha(opacity=80);
-<<<<<<< HEAD
-=======
 }
 .lightbox {
   display: none;
@@ -276,43 +244,8 @@ aside {
 .active{
   background-color: #000;
 }
-
-
-
-
-
-
-
 
 /*
-#menu {
-
->>>>>>> ec87de25e8b8640f7541556879d3738ef9ff4603
-}
-.lightbox {
-  display: none;
-  position: absolute;
-  top: 15%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  padding: 16px;
-  color:white;
-  background-color: #000;
-  z-index:1002;
-  overflow:auto;
-}
-
-#light {
-  font-size: 20px;
-  font-weight: 500;
-  list-style:none;
-  line-height: 3em;
-}
-.active{
-  background-color: #000;
-}
-
 .st_main {
   h1 {
     margin: 20px;

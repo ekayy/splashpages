@@ -14,4 +14,3 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require custom
-//= require jquery.ui.tabs

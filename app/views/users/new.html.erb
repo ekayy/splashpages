@@ -16,8 +16,8 @@
   		</div>
    	 <% end %>
 
-      <%= f.label :user_name %>
-      <%= f.text_field :user_name %>
+      <%= f.label :business_name %>
+      <%= f.text_field :business_name %>
 
     	<%= f.label :email %>
     	<%= f.text_field :email %>
@@ -25,8 +25,8 @@
     	<%= f.label :password %>
     	<%= f.password_field :password %>
 
-    	<%= f.label :password_confirmation %>
-    	<%= f.password_field :password_confirmation %>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name, :placeholder => "www.wespot.co/username" %>
 
     <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
   <% end %>

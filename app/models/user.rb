@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	attr_accessible :user_name, :email, :password, :password_confirmation
+	attr_accessible :user_name, :business_name, :email, :password
   has_secure_password
   has_one :profile, :dependent => :destroy
   #accepts_nested_attributes_for :profile
@@ -8,8 +8,10 @@ class User < ActiveRecord::Base
   before_save { |user| user.email = email.downcase }
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates_presence_of :business_name
   validates_uniqueness_of :user_name
   validates_presence_of :user_name
+  validates_format_of :username, :with => /^[A-Za-z\d_]+$/
   validates_uniqueness_of :email, :case_sensitive => false
   validates_presence_of :email
   validates_presence_of :password_confirmation
